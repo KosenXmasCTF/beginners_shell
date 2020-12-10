@@ -23,5 +23,6 @@ int main() {system("/bin/sh");}
 ## writeup
 やるだけ
 
-
-
+## Comment
+pwn初心者向け
+このジャンルの問題で、何をすればゴールなのかを提示するみたいな感じ。
