@@ -9,7 +9,7 @@ int main() {
 
   FILE *fp = fopen("/tmp/program.c", "w");
   fprintf(fp, "%s", program);
-  fflush(fp);
+  fclose(fp);
 
   system("gcc /tmp/program.c -o /tmp/program");
   system("/tmp/program");
