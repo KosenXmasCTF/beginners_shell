@@ -2,6 +2,9 @@
 #include<stdlib.h>
 
 int main() {
+  setvbuf(stdin, NULL, _IONBF, 0);
+  setvbuf(stdout, NULL, _IONBF, 0);
+
   char program[0x1000];
 
   puts("Enter your program!");
@@ -11,6 +14,8 @@ int main() {
   fprintf(fp, "%s", program);
   fclose(fp);
 
+  system("rm /tmp/program");
   system("gcc /tmp/program.c -o /tmp/program");
   system("/tmp/program");
+  system("rm /tmp/program");
 }
