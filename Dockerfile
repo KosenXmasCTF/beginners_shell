@@ -7,7 +7,7 @@ ENV DEBIAN_FRONTEND noninteractive
 
 # socatのインストール
 RUN apt-get -y update --fix-missing && apt-get -y upgrade
-RUN apt-get -y install socat
+RUN apt-get -y install socat gcc
 
 # ユーザーの追加
 RUN groupadd -r pwn && useradd -r -g pwn pwn
