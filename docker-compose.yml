@@ -3,5 +3,7 @@ version: '3'
 services:
   socat:
     build: '.'
+    image: 'docker.pkg.github.com/kosenxmasctf/beginners_shell/beginners_shell:latest'
+    container_name: 'beginners_shell'
     ports:
       - '9002:9002/tcp'
